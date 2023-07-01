@@ -12,6 +12,12 @@ namespace TeplanConsultoria.Controllers
             return View();
             //return "Retorno de mensagem no HelloWorldController";
         }
+        public IActionResult Welcome(string nome = "Luis Felipe Branco", int numTimes = 10) {
+            ViewData["Message"] = "Hello " + nome;
+            ViewData["NumTimes"] = numTimes;
+            return View();
+        }
+
         /*public string welcome(string nome, int qtd) {
             return HtmlEncoder.Default.Encode($"Ola {nome}, seja bem vindo pela: {qtd} vez");
         }*/
