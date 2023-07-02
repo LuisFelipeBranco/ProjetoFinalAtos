@@ -15,6 +15,7 @@ namespace TeplanConsultoria.Controllers
         public IActionResult Welcome(string nome = "Luis Felipe Branco", int numTimes = 10) {
             ViewData["Message"] = "Hello " + nome;
             ViewData["NumTimes"] = numTimes;
+            ViewData["Teste"] = "Apenas um texto de teste!!";
             return View();
         }
 
