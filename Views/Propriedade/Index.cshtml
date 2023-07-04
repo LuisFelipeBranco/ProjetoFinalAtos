@@ -2,34 +2,66 @@
     ViewData["Title"] = "Listagem de propriedades";
 }
 
-<h1 class="display-4">Listagem de propriedades</h1>
-<br>
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nome</th>
-            <th scope="col">Proprietario</th>
-            <th scope="col">Area</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>twitter</td>
-        </tr>
-    </tbody>
-</table>
+<div class="text-center">
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-primary" role="btn" asp-controller="Propriedade" asp-action="Criar">Adicionar nova propriedade</a>
+    </div>
+    <br>
+    <h1 class="display-4">Listagem de propriedades</h1>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Proprietário</th>
+                <th scope="col">Área</th>
+                <th scope="col">Cidade</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Sitio Carrapateira</td>
+                <td>Seu Delmiro</td>
+                <td> 8.65 ha</td>
+                <td>Caruaru</td>
+                <td>
+                    <div class="btn-group">
+                        <a asp-controller="Propriedade" asp-action="Editar" role="button" class="btn btn-primary">Editar</a>
+                        <a asp-controller="Propriedade" asp-action="ApagarConfirmacao" role="button" class="btn btn-danger">Apagar</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Sitio Arquibancada</td>
+                <td>Dona Zezinha</td>
+                <td>25.56 ha</td>
+                <td>Gravatá</td>
+                <td>
+                    <div class="btn-group">
+                        <a asp-controller="Propriedade" asp-action="Editar" role="button" class="btn btn-primary">Editar</a>
+                        <a asp-controller="Propriedade" asp-action="ApagarConfirmacao" role="button" class="btn btn-danger">Apagar</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Sitio Arrevuar</td>
+                <td>Seu João</td>
+                <td>65.98 ha</td>
+                <td>Garanhuns</td>
+                <td>
+                    <div class="btn-group">
+                        <a asp-controller="Propriedade" asp-action="Editar" role="button" class="btn btn-primary">Editar</a>
+                        <a asp-controller="Propriedade" asp-action="ApagarConfirmacao" role="button" class="btn btn-danger">Apagar</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
