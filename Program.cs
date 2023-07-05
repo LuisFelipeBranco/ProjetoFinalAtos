@@ -1,3 +1,7 @@
+using Microsoft.EntityFrameworkCore;
+using TeplanConsultoria.DBConnect;
+using TeplanConsultoria.Repositorio;
+
 namespace TeplanConsultoria
 {
     public class Program
@@ -8,6 +12,11 @@ namespace TeplanConsultoria
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            var provider = builder.Services.BuildServiceProvider();
+            var configuration = provider.GetService<IConfiguration>();
+            builder.Services.AddDbContext<BancoContext>(item => item.UseSqlServer(configuration.GetConnectionString("myconn")));
+            builder.Services.AddScoped<IPropriedadeRepositorio, PropriedadeRepositorio>();
 
             var app = builder.Build();
 

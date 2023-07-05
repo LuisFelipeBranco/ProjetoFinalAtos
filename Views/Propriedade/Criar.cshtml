@@ -1,36 +1,39 @@
-﻿@{
+﻿@model PropriedadeModel
+
+@{
     ViewData["Title"] = "Cadastrar nova propriedade";
 }
 
-<form>
+<form asp-controller="Propriedade" asp-action="Criar" method="post">
     <div class="form-row">
         
         <div class="form-group">
             <label for="propriedade">Propriedade</label>
-            <input type="text" class="form-control" placeholder="Nome da propriedade">
+            <input type="text" asp-for="NomePropriedade" class="form-control" placeholder="Nome da propriedade">
         </div>
         <br>
         <div class="form-group">
             <label for="proprietário">Proprietário</label>
-            <input type="text" class="form-control" placeholder="Nome do proprietário">
+            <input type="text" asp-for="NomeProprietario" class="form-control" placeholder="Nome do proprietário">
         </div>
         <br>
         <div class="form-group">
             <label for="area">Área</label>
-            <input type="text" class="form-control" placeholder="Área da propriedade">
+            <input type="text" asp-for="Area" class="form-control" placeholder="Área da propriedade">
         </div>
         <br>
         <div class="form-group">
             <label for="cidade">Cidade</label>
-            <input type="text" class="form-control" placeholder="Cidade">
+            <input type="text" asp-for="Cidade" class="form-control" placeholder="Cidade">
         </div>
         <br>
         <div class="form-group">
-            <label for="dataTrabalho">Data de realização da atividade</label>
-            <input type="date" class="form-control-sm" placeholder="datTrabalho">
+            <label for="contato">Contato</label>
+            <input type="text" asp-for="Contato" class="form-control" placeholder="Contato">
         </div>
+        <br>
     </div>
     <br>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Gravar</button>
     <a class="btn btn-secondary" asp-controller="Propriedade" asp-action="Index">Voltar</a>
 </form>
