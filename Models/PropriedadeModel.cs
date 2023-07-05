@@ -10,6 +10,10 @@ namespace TeplanConsultoria.Models
         public string Cidade { get; set; }
         public string NomeProprietario { get; set; }
         public string Contato { get; set; }
+        public DateTime dataServico { get; set; }
+        public DateTime dataNota { get; set; }
+        public DateTime dataPagamento { get; set; }
+        public double Valor { get; set; }
 
     }
 }
